@@ -18,6 +18,14 @@
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 		<link rel="stylesheet" href="css/theme/nerdcred.css" id="theme">
 
+        <style>
+            li {
+                text-align: left;
+            }
+            code {
+                font-size: 40px;
+            }
+        </style>
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -60,7 +68,7 @@
 						Increase your productivity by maximizing your terminal’s screen real estate.
 						<li>Show the current version of Ruby you're running</li>
 						<li>Git status of current directory</li>
-						<li>Color code different pieces of information</li>
+						<li>Color-code different pieces of information</li>
 						<li>It looks cool! ʕ•ᴥ•ʔ</li>
 					</p>
 
@@ -73,44 +81,79 @@
 					<h2>The Command Line Prompt</h2>
 					<p>
 						PS1 is the prompt on your terminal’s command line.<br>
-						Usually looks like this: <code>hostname:~ username$</code>
+                        Usually looks like this:<br/>
+                        <pre><code data-trim>hostname:~ username$</code></pre>
 					</p>
 					<p>
 						What's your current prompt?<br>
-						Open the terminal and type <code>echo $PS1</code><br>
-						What does it return? <code class="fragment">\h:\W \u\$</code>
+						Open the terminal and type
+                        <pre><code data-trim>echo $PS1</code></pre><br/>
+                        What does it return?<br/>
+                            <pre class="fragment">
+                            <code>\h:\W \u\$</code>
+                            </pre>
 					</p>
 
 					<aside class="notes"></aside>
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Let's get started!</h2>
 					<p>
+                    Let's change our terminal from this
+                    <img src="images/mac_term.png">
 					</p>
+                    <p class="fragment">
+                        To this:
+                        <img src="images/pamo_bash.png">
+                    </p>
 
 					<aside class="notes"></aside>
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Or this:</h2>
 					<p>
-					</p>
+                        <img src="images/rainbow_prompt.png">
+                    </p>
 
 					<aside class="notes"></aside>
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Hello, Bash</h2>
 					<p>
+                    Type PS1="Hello, Bash"
 					</p>
 
-					<aside class="notes"></aside>
+					<aside class="notes">
+                        <ul>
+                            <li>This is just the beginning, we'll introduce
+                            .profile and .bashrc for long-lasting effects.
+                            </li>
+                        </ul>
+                    </aside>
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Persisting changes</h2>
 					<p>
+                    <ul>
+                        <li>
+                            Open your ~/.bashrc in the terminal
+                            <pre>
+                            <code>vim ~/.bashrc </code>
+                            <code>open ~/.bashrc</code>
+                            <code>emacs ~/.bashrc</code>
+                            </pre>
+                        </li>
+                        <li>Add your PS1
+                            <pre><code data-trim>export PS1=">> "</code></pre>
+                        </li>
+                        <li>Save</li>
+                        <li>Apply <pre><code>source ~/.bashrc</code></pre>
+                        </li>
+                    </ul>
 					</p>
 
 					<aside class="notes"></aside>
