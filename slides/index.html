@@ -213,19 +213,86 @@ emacs ~/.bashrc</code></pre>
 				</section>
 
 				<section>
-					<h1>Colors!</h1>
+                    <section>
+                        <h1>Colors!</h1>
+                        <br>
+                        <h3>This is boring:</h3>
+                        <code>(5:40 PM) (pamo@host):~/home</code>
+                        <br>
+                        <pre><code style="color: #00FF00">PS1="(\@)(\u@\h):\W "</pre></code>
+                        <br>
+                        <h3>This is more fun:</h3>
+                        <code>(<span style="color: cyan">05:40 PM</span>)(<span
+                                style="color: purple">pamo@host</span>):<span style="color: red">~/home</span></code>
+                        <br>
+                        <pre><code style="color: #00FF00; text-align: left; word-wrap: break-word; overflow: visible">PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\h\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\W "</code></pre>
+                        <aside class="notes"></aside>
+                    </section>
+                    <section>
+                    <h2>Break it Down</h2>
+                    <code><span style="color: red">\[</span><span style="color: yellow">\033[</span><span style="color: cyan">0</span>;COLORCODE<span style="color: red">\]</span></code>
                     <br>
-					<h3>This is boring:</h3>
-                    <code>(5:40 PM) (pamo@host):~/home</code>
                     <br>
-                    <pre><code style="color: #00FF00">PS1="(\@)(\u@\h):\W "</pre></code>
-                    <br>
-					<h3>This is more fun:</h3>
-                    <code>(<span style="color: cyan">05:40 PM</span>)(<span style="color: cyan">pamo@host</span>):<span style="color: red">~/home</span></code>
-                    <br>
-                    <pre><code style="color: #00FF00; text-align: left;
-                    word-wrap: break-word; overflow: visible">PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\h\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\W "</code></pre>
-					<aside class="notes"></aside>
+                    <ul>
+                        <li style="color: red">Contain the non-printable
+                        characters</li>
+                        <li style="color: yellow">Escape character</li>
+                        <li style="color: cyan">Bold (1) vs Normal (0) characters</li>
+                    </ul>
+                    </section>
+                    <section>
+                        <h2>Color Codes</h2>
+                        <ul style="vertical-align: top">
+                            <li>30m - Black</li>
+                            <li>31m - Red</li>
+                            <li>32m - Green</li>
+                            <li>33m - Yellow</li>
+                            <li>34m - Blue</li>
+                        </ul>
+                        <ul style="vertical-align: top">
+                            <li>35m - Purple</li>
+                            <li>36m - Cyan</li>
+                            <li>37m - White</li>
+                            <li>0 - Normal</li>
+                            <li>1 - Bold</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Play with Colors!</h2>
+                        <code style="text-align: center; color: #00FF00">\[\033[0;COLORCODE\]</code>
+                        <br>
+                        <br>
+                        <p>Turn this</p>
+                        <code>(5:40 PM) (pamo@host):~/home</code>
+                        <br>
+                        <br>
+                        <p>Into this</p>
+                        <code>(<span style="color: cyan">05:40 PM</span>)(<span
+                                style="color: purple">pamo</span>@<span style="color:
+                                    #00FF00">host</span>):<span style="color:
+                                    yellow">~/home</span></code>
+                    </section>
+                    <section>
+                        <h2>Introducing "no color"</h2>
+                        <ul>
+                            <li>What happens when you type a command?
+                                <ul>
+                                    <li>The text is all yellow!</li>
+                                </ul>
+                            </li>
+                            <li>Solution: "no color" command
+                            <ul style="list-style: none;">
+                                <li>
+                                   <code style="color: #00FF00">\[\033[0m\]</code>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>Try it out</li>
+                        </ul>
+                        <aside class="notes">
+                            So you've applied your changes...
+                        </aside>
+                    </section>
 				</section>
 
 				<section>
