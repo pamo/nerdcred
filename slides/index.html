@@ -80,16 +80,14 @@
 					<p>
 						PS1 is the prompt on your terminal’s command line.<br>
                         Usually looks like this:<br/>
-                        <pre><code data-trim>hostname:~ username$</code></pre>
+                        <pre class="prompt"><code>hostname:~ username$</code></pre>
 					</p>
 					<p>
 						What's your current prompt?<br>
 						Open the terminal and type
-                        <pre><code data-trim>echo $PS1</code></pre><br/>
+                        <pre class="prompt"><code>echo $PS1</code></pre><br/>
                         What does it return?<br/>
-                            <pre class="fragment">
-                            <code>\h:\W \u\$</code>
-                            </pre>
+                        <pre><code>\h:\W \u\$</code></pre>
 					</p>
 
 					<aside class="notes"></aside>
@@ -146,11 +144,9 @@
                     <ul>
                         <li>
                             Open your ~/.bashrc in the terminal
-                            <pre>
-                            <code>vim ~/.bashrc
+                            <pre><code>vim ~/.bashrc
 open ~/.bashrc
-emacs ~/.bashrc</code>
-                            </pre>
+emacs ~/.bashrc</code></pre>
                         </li>
                         <li>Add your PS1
                             <pre><code data-trim>export PS1=">> "</code></pre>
@@ -217,10 +213,18 @@ emacs ~/.bashrc</code>
 				</section>
 
 				<section>
-					<h2></h2>
-					<p>
-					</p>
-
+					<h1>Colors!</h1>
+                    <br>
+					<h3>This is boring:</h3>
+                    <code>(5:40 PM) (pamo@host):~/home</code>
+                    <br>
+                    <pre><code style="color: #00FF00">PS1="(\@)(\u@\h):\W "</pre></code>
+                    <br>
+					<h3>This is more fun:</h3>
+                    <code>(<span style="color: cyan">05:40 PM</span>)(<span style="color: cyan">pamo@host</span>):<span style="color: red">~/home</span></code>
+                    <br>
+                    <pre><code style="color: #00FF00; text-align: left;
+                    word-wrap: break-word; overflow: visible">PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\h\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\W "</code></pre>
 					<aside class="notes"></aside>
 				</section>
 
