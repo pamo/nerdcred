@@ -167,11 +167,55 @@ emacs ~/.bashrc</code>
 				</section>
 
 				<section>
-					<h2></h2>
-					<p>
-					</p>
+					<section>
+						<h2>Escape Sequences</h2>
+						<p>Remember this? <code>\h:\W \u\$</code></p>
+						<p>How does that translate to this? <code>hostname:~ username$</code></p>
+						<pre class="fragment"><b>Escape sequences!</b></pre>
 
-					<aside class="notes"></aside>
+						<aside class="notes"></aside>
+					</section>
+					<section>
+						<h2>Escape Sequences</h2>
+						<table style="width:1000">
+							<tr>
+								<td>
+									\d  the date  in  "Weekday  Month  Date" <br> 
+									\e  an ASCII escape character (033) <br>
+									\h  the hostname up to the first `.' <br>
+									\H  the hostname <br>
+									\n  newline <br>
+									\r  carriage return <br>
+									\t  current time in 24-hr HH:MM:SS format <br>
+									\T  current time in 12-hour HH:MM:SS
+								</td>
+								<td>
+									\@  time in 12-hour am/pm <br>
+									\u  username of the current user <br>
+									\w  current working directory <br>
+									\W  basename of current working direc­tory <br>
+									\!  the history number of this command <br>
+									\#  the command number of this command <br>
+									\\  a backslash
+							</td>
+							</tr>
+						</table>
+						<p class="link-to-cheat-sheet">http://git.io/vP7GgQ</p>
+					</section>
+					<section>
+						<h2>Escape Sequences Example</h2>
+						<p><em><b>TODO:</b> This PS1 makes this prompt</em></p>
+					</section>
+					<section>
+					<h2>Escape Sequences Example</h2>
+					<p>Change your Bash prompt to match ours:<br>
+						<code>(05:40 PM)(username@host:~/home)</code>
+					</section>
+					<section>
+						<h2>Escape Sequences Solution</h2>
+						<p><code>export PS1=”(\@)(\u@\h):\W “</code></p>
+						<img src="images/escape_sequences.png">
+					</section>
 				</section>
 
 				<section>
