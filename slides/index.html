@@ -16,17 +16,30 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-        <style>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+       <style>
             li {
                 text-align: left;
             }
             code {
                 font-size: 40px;
             }
+            div.multi-column{
+                font-family: Consolas, monospace;
+                font-size: 80%;
+                -moz-column-count: 2;
+                -moz-column-gap: 20%;
+                -webkit-column-count: 2;
+                -webkit-column-gap: 20%;
+                column-count: 2;
+                column-gap: 20%;
+            }
+            .child {
+                text-align: left;
+            }
         </style>
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -163,24 +176,33 @@ emacs ~/.bashrc</code></pre>
 				<section>
 					<section>
 						<h2>Escape Sequences</h2>
-						<p>Remember this? <code>\h:\W \u\$</code></p>
-						<p>How does that translate to this? <code>hostname:~ username$</code></p>
-						<pre class="fragment"><b>Escape sequences!</b></pre>
-
+                        <p>Remember this? </p>
+                        <pre><code>\h:\W \u\$</code></pre>
+                        <p>How does that translate to this?</p>
+                        <pre><code>hostname:~ username$</code></pre>
+						<h3 class="fragment">Escape sequences!</h3>
 						<aside class="notes"></aside>
 					</section>
 					<section>
-						<h2>Escape Sequences</h2>
-						<table>
-							<tr><td>\d</td><td nowrap>the date in "Weekday Month Date"</td><td>\e</td><td nowrap>an ASCII escape character (033)</td></tr>
-							<tr><td>\h</td><td nowrap>the hostname up to the first `.'</td><td>\H</td><td nowrap>the hostname</td></tr>
-							<tr><td>\n</td><td nowrap>newline</td><td>\r</td><td nowrap>carriage return</td></tr>
-							<tr><td>\t</td><td nowrap>current time in 24-hr HH:MM:SS format</td><td>\T</td><td nowrap>current time in 12-hour HH:MM:SS</td></tr>
-							<tr><td>\@</td><td nowrap>time in 12-hour am/pm</td><td>\u</td><td nowrap>username of the current user</td></tr>
-							<tr><td>\w</td><td nowrap>current working directory</td><td>\W</td><td nowrap>basename of current working direc­tory</td></tr>
-							<tr><td>\!</td><td nowrap>the history number of this command</td><td>\#</td><td nowrap>the command number of this command</td></tr>
-							<tr><td>\\</td><td nowrap>a backslash</td></tr>
-						</table>
+						<h2>Escape Sequence Cheat Sheet</h2>
+                        <div class="multi-column">
+                            <div class="child">\d the date in "Weekday Month Date"</div>
+                            <div class="child">\H   the hostname</div>
+                            <div class="child">\h   the hostname up to the first `.' </div>
+                            <div class="child">\r   carriage return</div>
+                            <div class="child">\n newline</div>
+                            <div class="child">\t current time in 24hr HH:MM:SS format</div>
+                            <div class="child"> \T  current time in 12-hour HH:MM:SS</div>
+                            <div class="child">\@   time in 12-hour am/pm</div>
+                            <div class="child">\w   current working directory</div>
+                            <div class="child">\W   basename of current working directory</div>
+                            <div class="child">\#  the command number of this command</div>
+                            <div class="child">\!  the history number of this command</div>
+                            <div class="child">\\ a backslash</div>
+                            <div class="child">\e   an ASCII escape character (033)</div>
+                            <div class="child">\u   username of the current user</div>
+                        </div>
+                        
 						<p class="link-to-cheat-sheet">http://git.io/vP7GgQ</p>
 					</section>
 					<section>
