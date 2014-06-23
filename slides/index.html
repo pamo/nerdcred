@@ -304,12 +304,35 @@ emacs ~/.bashrc</code></pre>
 				</section>
 
 				<section>
-					<h2></h2>
-					<p>
-					</p>
+					<section>
+						<h2>Variables</h2>
+						<li>
+							This is hard to read:<br>
+							PS1=”(\[\033[0;36m\]\@\[\033[0m\])(\[\033[0;35m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]):\[\033[0;33m\]\W\[\033[0m\] “
+						</li><br>
+						<li>
+							This is much easier to read:<br>
+							PS1=”(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR} “
+						</li>
 
-					<aside class="notes"></aside>
+						<aside class="notes"></aside>
+					</section>
+					<section>
+						<h2>Variables</h2>
+						<p>(05:40 PM)(pamo@host):~/home</p>
+						YELLOW="\[\033[0;33m\]"<br>
+						CYAN="\[\033[0;36m\]"<br>
+						PURPLE="\[\033[0;95m\]"<br>
+						GREEN="\[\033[0;32m\]"<br>
+						NO_COLOR="\[\033[0m\]"
+						<p>PS1="(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR} "</p>
+					</section>	
 				</section>
+
+				<section>
+					<h2>Draw it Out!</h2>
+					<li>What do you want you prompt to look like?</li>
+					<li>Draw it out and then reference the cheat sheets to make it a REALITY</li></section>
 
 				<section>
 					<h2>Demo time!</h2>
