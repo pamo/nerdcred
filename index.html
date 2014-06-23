@@ -28,42 +28,74 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-              <a name="nerdcred-the-art-of-customizing-your-bash-prompt" class="anchor" href="#nerdcred-the-art-of-customizing-your-bash-prompt"><span class="octicon octicon-link"></span></a>NerdCred++; The art of customizing your bash prompt.</h3>
+          <h2><a name="nerdcred-the-art-of-customizing-your-bash-prompt"
+                  class="anchor"
+              href="#nerdcred-the-art-of-customizing-your-bash-prompt"><span
+          class="octicon octicon-link"></span></a>NerdCred++; The art of
+  customizing your bash prompt.</h2>
 
           <p>So you want a shiny lightning bolt on your bash prompt, but don't know where to start, huh? 
           Well, hopefully you've been able to attend our workshop in order to get the
-          basics down (slides <a href="slides/index.html">here</a>), but if not we've got you covered!</p>
+          basics down, but if not we've got you covered!</p>
 
-          <pre><code>$ vim ~/.bashrc
-$ source ~/.bashrc
-          </code></pre>
+          The slides to our workshop cover the explanation of components that make up an informative bash prompt and can be found <a href="http://pamo.github.io/nerdcred/slides" target="_blank">here</a>
+
+          <h3>Fire up your terminal</h3>
+          <p>Open up your bash profile and get customizing!</p>
+          <pre><code>$ vim ~/.bashrc</pre></code>
+          <p>Done? Source your bash profile to apply your changes</p>
+          <pre><code>$ source ~/.bashrc</code></pre>
+
+          <h3>Cheatsheets</h3>
+          <p>We've made it easy to semantically add color codes and details to your prompt. Add these to your bash profile to make customization a breeze.</p>
+          <ul>
+              <li><a
+                  href="https://gist.github.com/pamo/583ce9e3e7e0603d104f#file-colors-sh"
+              target="_blank">Color codes</a></li>
+              <li><a href="https://gist.github.com/pamo/583ce9e3e7e0603d104f#file-escape_sequences-sh" target="_blank">Escape sequences</a></li>
+          </ul>
+
           <h3>Display your Ruby version</h3>
               <p>Helpful if you use a ruby manager to set different versions for projects</p>
               <p>The following snippet will add the ruby version before the current working directory</p>
               <pre><code>PS1='$(ruby -e "print RUBY_VERSION") \W\$ '</code></pre>
               <p>Will turn into</p>
               <pre><code>1.9.3 toDoApp$</code></pre>
+        <h3>Feeling Lazy?</h3>
+        <p>Check out these bash prompt builders:</p>
+        <ul>
+            <li><a href="http://ezprompt.net">EZPrompt</a></li>
+            <li><a href="http://andrewray.me/bash-prompt-builder/">Bash Prompt Builder</a></li>
+            <li><a href="http://www.kirsle.net/wizards/ps1.html">Bash $PS1 Generator <sup>2.0</sup></a></li>
+        </ul>
 
-<h3>Feeling Lazy?</h3>
-<p>Check out these bash prompt builders:</p>
-<ul>
-    <li><a href="http://ezprompt.net">EZPrompt</a></li>
-    <li><a href="http://andrewray.me/bash-prompt-builder/">Bash Prompt Builder</a></li>
-    <li><a href="http://www.kirsle.net/wizards/ps1.html">Bash $PS1 Generator <sup>2.0</sup></a></li>
-</ul>
-<h3>Want something more fabulous?</h3>
-<p>Check out Rachel's <a href="https://github.com/raychatter/bash-git-prompt">rainbow prompt</a> - An informative and fancy bash prompt for Git users with a fabulous
-rainbow twist.</p>
+        <h3>Want something more fabulous?</h3>
+        <p>Check out Rachel's <a href="https://github.com/raychatter/bash-git-prompt">rainbow prompt</a> - An informative and fancy bash prompt for Git users with a fabulous rainbow twist.</p>
 </section>
 
         <aside id="sidebar">
-            <p class="repo-owner">
-            <strong>Authors and Contributors</strong>
-            You can find Rachel Walker (<a href="https://github.com/raychatter" class="user-mention">@raychatter</a>) and Pamela Ocampo (<a
-        href="https://github.com/pamo" class="user-mention">@pamo</a>) all
-    around the web. We primarily build things, but always take pride and adding
-    a little flair to our workspace.
+            <h3>Authors and Contributors</h3>
+            You can find Rachel Walker (<a href="https://github.com/raychatter"
+                class="user-mention">@raychatter</a>) and Pamela Ocampo (<a href="https://github.com/pamo" class="user-mention">@pamo</a>) all around the web.
+            We primarily build things, but always take pride and adding a little flair to our workspace.
+            <br />
+            <h3>Follow Rachel</h3>
+            <img src="images/raychatter.jpg" class="profile">
+            <ul>
+                <li><a href="http://instagram.com/raychatter" target="_blank"><img src="images/instagram.png" alt="Instagram
+                    icon">Instagram</li></a>
+                <li><a href="http://twitter.com/raychatter" target="_blank"><img
+                    src="images/twitter.png" alt="Twitter icon">Twitter</li></a>
+            </ul>
+            <h3>Follow Pam</h3>
+            <img src="images/pamo.jpg" class="profile">
+            <ul>
+                <li><a href="http://instagram.com/pmocampo"
+                    target="_blank" alt="Instagram icon"><img
+                    src="images/instagram.png">Instagram</li></a>
+                <li><a href="http://twitter.com/pmocampo" target="_blank"><img
+                    src="images/twitter.png" alt="Twitter icon">Twitter</li></a>
+            </ul>
             </p>
         </aside>
       </div>
