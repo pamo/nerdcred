@@ -98,16 +98,15 @@
 					<p>
 						What's your current prompt?<br>
 						Open the terminal and type
-                        <pre class="prompt"><code>echo $PS1</code></pre><br/>
-                        What does it return?<br/>
-                        <pre><code>\h:\W \u\$</code></pre>
+                        <pre class="prompt"><code>echo $PS1</code></pre><p/>
+                        <p class="fragment">What does it return?</p>
+                        <pre class="fragment"><code>\h:\W \u\$</code></pre>
 					</p>
 
 					<aside class="notes"></aside>
 				</section>
 
 				<section>
-					<h2>Let's get started!</h2>
 					<p>
                     Let's change our terminal from this
                     <img src="images/mac_term.png">
@@ -127,6 +126,10 @@
                     </p>
 
 					<aside class="notes"></aside>
+				</section>
+				
+				<section>
+					<h1>Let's get started!</h1>
 				</section>
 
 				<section>
@@ -203,10 +206,9 @@ emacs ~/.bashrc</code></pre>
                             <div class="child">\u   username of the current user</div>
                         </div>
 						<p class="link-to-cheat-sheet">Link to this sheet: <a href="http://git.io/vP7GgQ">http://git.io/vP7GgQ</a></p>
-					</section>
-					<section>
-						<h2>Ejemplo Por Favor!</h2>
-						<p><em><b>TODO:</b> This PS1 makes this prompt</em></p>
+						<aside class="notes">
+							When you add these to the PS1 string, magic happens!
+						</aside>
 					</section>
 					<section>
 					<h2>Escape Sequences Example</h2>
@@ -275,27 +277,31 @@ emacs ~/.bashrc</code></pre>
                         <br>
                         <br>
                         <p>Into this</p>
-                        <code>(<span style="color: cyan">05:40 PM</span>)(<span
-                                style="color: purple">pamo</span>@<span style="color:
-                                    #00FF00">host</span>):<span style="color:
+                        <code><span style="color: cyan">(05:40 PM)</span><span style="color:
+                                    #00FF00">pamo@host:</span><span style="color:
                                     yellow">~/home</span></code>
+                    </section>
+                    <section>
+                    	<h2>Colors Solution</h2>
+                    	<p><code>export PS1="\[\033[0;36m\](\@)\[\033[0;32m\]\u@\h:\[\033[0;33m\]\w"</code></p>
+                    	<p><img src="images/colors_solution.png"></p>
                     </section>
                     <section>
                         <h2>Introducing "no color"</h2>
                         <ul>
                             <li>What happens when you type a command?
                                 <ul>
-                                    <li>The text is all yellow!</li>
+                                    <li class="fragment">The text is all yellow!</li>
                                 </ul>
                             </li>
-                            <li>Solution: "no color" command
+                            <li class="fragment">Solution: "no color" command
                             <ul style="list-style: none;">
                                 <li>
                                    <code style="color: #00FF00">\[\033[0m\]</code>
                                 </li>
                             </ul>
                             </li>
-                            <li>Try it out</li>
+                            <li class="fragment">Try it out!</li>
                         </ul>
                         <aside class="notes">
                             So you've applied your changes...
@@ -308,11 +314,11 @@ emacs ~/.bashrc</code></pre>
 						<h2>Variables</h2>
 						<li>
 							This is hard to read:<br>
-							PS1=”(\[\033[0;36m\]\@\[\033[0m\])(\[\033[0;35m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]):\[\033[0;33m\]\W\[\033[0m\] “
+							<code>PS1=”(\[\033[0;36m\]\@\[\033[0m\])(\[\033[0;35m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]):\[\033[0;33m\]\W\[\033[0m\]“</code>
 						</li><br>
 						<li>
 							This is much easier to read:<br>
-							PS1=”(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR} “
+							<code>PS1=”(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR}“</code>
 						</li>
 
 						<aside class="notes"></aside>
