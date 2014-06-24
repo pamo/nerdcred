@@ -39,6 +39,10 @@
             .child {
                 text-align: left;
             }
+
+            .reveal p {
+            	text-align: left;
+            }
         </style>
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -65,7 +69,7 @@
 				<section>
 					<h1>Nerdcred++;</h1>
 					<h3>The art of customizing your bash prompt</h3>
-					<p>
+					<p style="text-align:center">
 						<small>
 							Created by<br> <a href="http://pamo.tumblr.com">Pam Ocampo</a> / <a href="http://twitter.com/pmocampo">@pmocampo</a><br>
 							<a href="http://rachel-walker.info">Rachel Walker</a> / <a href="http://twitter.com/raychatter">@raychatter</a>
@@ -91,10 +95,10 @@
 				<section>
 					<h2>The Command Line Prompt</h2>
 					<p>
-						PS1 is the prompt on your terminal’s command line.<br>
-                        Usually looks like this:<br/>
+						PS1 controls the prompt on your terminal’s command line.<br><br>
+                        The prompt usually looks like this (on Mac):<br/>
                         <pre class="prompt"><code>hostname:~ username$</code></pre>
-					</p>
+					</p><br>
 					<p>
 						What's your current prompt?<br>
 						Open the terminal and type
@@ -103,15 +107,15 @@
                         <pre class="fragment"><code>\h:\W \u\$</code></pre>
 					</p>
 
-					<aside class="notes"></aside>
+					<aside class="notes">The PS1 variable just takes in a string of characters.</aside>
 				</section>
 
 				<section>
-					<p>
+					<p style="text-align:center">
                     Let's change our terminal from this
                     <img src="images/mac_term.png">
 					</p>
-                    <p class="fragment">
+                    <p class="fragment" style="text-align:center">
                         To this:
                         <img src="images/pamo_bash.png">
                     </p>
@@ -121,7 +125,7 @@
 
 				<section>
 					<h2>Or this:</h2>
-					<p>
+					<p style="text-align:center">
                         <img src="images/rainbow_prompt.png">
                     </p>
 
@@ -135,9 +139,9 @@
 				<section>
 					<section>
 						<h2>Hello, Bash</h2>
-						<p>
-							Open the terminal<br>
-	                    	Type <code>PS1="Hello, Bash"</code>
+						<p style="text-align:center">
+							Open the terminal and type:<br>
+	                    	<pre><code>PS1="Hello, Bash"</code></pre>
 						</p>
 						<aside class="notes">
 	                        <ul>
@@ -150,7 +154,7 @@
                     <section>
                     	<h2>Hello, Bash</h2>
                     	<code>PS1="Hello, Bash"</code>
-                    	<p><img src="images/hello_bash.png"></p>
+                    	<p style="text-align:center"><img src="images/hello_bash.png"></p>
                     </section> 
 				</section>
 
@@ -205,14 +209,14 @@ emacs ~/.bashrc</code></pre>
                             <div class="child">\e   an ASCII escape character (033)</div>
                             <div class="child">\u   username of the current user</div>
                         </div>
-						<p class="link-to-cheat-sheet">Link to this sheet: <a href="http://git.io/vP7GgQ">http://git.io/vP7GgQ</a></p>
+						<p class="link-to-cheat-sheet" style="text-align:center">Link to this sheet: <a href="http://git.io/vP7GgQ">http://git.io/vP7GgQ</a></p>
 						<aside class="notes">
 							When you add these to the PS1 string, magic happens!
 						</aside>
 					</section>
 					<section>
 					<h2>Escape Sequences Example</h2>
-					<p>Change your Bash prompt to match ours:<br>
+					<p style="text-align:center">Change your Bash prompt to match ours:<br><br>
 						<code>(05:40 PM)(username@host:~/home)</code>
 					</section>
 					<section>
@@ -266,26 +270,26 @@ emacs ~/.bashrc</code></pre>
                             <li>0 - Normal</li>
                             <li>1 - Bold</li>
                         </ul></p><br>
-                        <p class="link-to-cheat-sheet">Link to this sheet: <a href="http://git.io/vP7GgQ">http://git.io/vP7GgQ</a></p>
+                        <p class="link-to-cheat-sheet" style="text-align:center">Link to this sheet: <a href="http://git.io/vP7GgQ">http://git.io/vP7GgQ</a></p>
                     </section>
                     <section>
                         <h2>Play with Colors!</h2>
                         <code style="text-align: center; color: #00FF00">\[\033[0;COLORCODE\]</code>
                         <br>
                         <br>
-                        <p>Turn this</p>
+                        <p style="text-align:center">Turn this</p>
                         <code>(5:40 PM) (pamo@host):~/home</code>
                         <br>
                         <br>
-                        <p>Into this</p>
+                        <p style="text-align:center">Into this</p>
                         <code><span style="color: cyan">(05:40 PM)</span><span style="color:
                                     #00FF00">pamo@host:</span><span style="color:
                                     yellow">~/home</span></code>
                     </section>
                     <section>
                     	<h2>Colors Solution</h2>
-                    	<p><code>export PS1="\[\033[0;36m\](\@)\[\033[0;32m\]\u@\h:\[\033[0;33m\]\w"</code></p>
-                    	<p><img src="images/colors_solution.png"></p>
+                    	<p style="text-align:center"><code>export PS1="\[\033[0;36m\](\@)\[\033[0;32m\]\u@\h:\[\033[0;33m\]\w"</code></p>
+                    	<p style="text-align:center"><img src="images/colors_solution.png"></p>
                     </section>
                     <section>
                         <h2>Introducing "no color"</h2>
@@ -327,9 +331,8 @@ emacs ~/.bashrc</code></pre>
 					</section>
 					<section>
 						<h2>Variables</h2>
-						<p>(05:40 PM)(pamo@host):~/home</p>
-						<pre><code style="color: #00FF00; text-align: left; word-wrap: break-word; overflow: visible">
-YELLOW="\[\033[0;33m\]"
+						<p style="text-align:center">(05:40 PM)(pamo@host):~/home</p>
+						<pre><code style="color: #00FF00; text-align: left; word-wrap: break-word; overflow: visible">YELLOW="\[\033[0;33m\]"
 CYAN="\[\033[0;36m\]"
 PURPLE="\[\033[0;95m\]"
 GREEN="\[\033[0;32m\]"
